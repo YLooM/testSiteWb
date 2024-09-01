@@ -16,7 +16,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://ultimatewebsite.netlify.app/"],
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
@@ -26,7 +26,7 @@ const io = socketIo(server, {
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://ultimatewebsite.netlify.app/"],
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
