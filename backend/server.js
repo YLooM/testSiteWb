@@ -17,8 +17,8 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: [
-      "http://localhost:3000",
-      "https://66d3d8db75f6cec2025b81b8--quiet-cucurucho-1fa09b.netlify.app",
+      "https://resplendent-fairy-c401cc.netlify.app/games",
+      "https://testsitewb.onrender.com",
     ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
@@ -30,8 +30,8 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "https://66d3d8db75f6cec2025b81b8--quiet-cucurucho-1fa09b.netlify.app",
+      "https://resplendent-fairy-c401cc.netlify.app/games",
+      "https://testsitewb.onrender.com",
     ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
