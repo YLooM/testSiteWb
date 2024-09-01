@@ -16,10 +16,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: [
-      "https://resplendent-fairy-c401cc.netlify.app/games",
-      "https://testsitewb.onrender.com",
-    ],
+    origin: ["http://localhost:3000", "https://testsitewb.onrender.com"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
@@ -29,10 +26,7 @@ const io = socketIo(server, {
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: [
-      "https://resplendent-fairy-c401cc.netlify.app/games",
-      "https://testsitewb.onrender.com",
-    ],
+    origin: ["http://localhost:3000", "https://testsitewb.onrender.com"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
