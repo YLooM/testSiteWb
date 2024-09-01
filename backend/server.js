@@ -16,7 +16,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://ultimatewebsite.netlify.app/",
+    origin: "https://ultimatewebsite.netlify.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
@@ -26,7 +26,7 @@ const io = socketIo(server, {
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "https://ultimatewebsite.netlify.app/",
+    origin: "https://ultimatewebsite.netlify.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Authorization"],
     credentials: true,
